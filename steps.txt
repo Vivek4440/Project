@@ -2,10 +2,14 @@
 2. install git
 3. install docker
 4. create dockerfile for apache
-5. push dockerfile to github
+5. push dockerfile to github:
+git init
+git add Dockerfile 
+git status
+git: username / token(not password)
 
 6. login to jenkins: and manage jenkins -> docker , docker pipeline
-in jenkins add dockerhub credential from gloabl congf
+in jenkins add dockerhub credential from gloabl conf (keep id: value same which is passed to credentials in groovy, e.g: dockerhub)
 
 7. create a pipeline job and copy paste the groovy sctipr from 
 https://github.com/TridevGuha/docker-proj1.git
@@ -13,3 +17,4 @@ https://github.com/TridevGuha/docker-proj1.git
 9. troubleshoot: make sure dockerfile is in the /var/linb/jenkins/workspace/<proj-name> fodler - put it manually iof not present
 
 10. run groovy.gy (eliminate remove container/image / last step)
+verify the same with:  # docker ps && docker images
